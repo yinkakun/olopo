@@ -5,11 +5,11 @@ import { loadEnv } from "vite";
 
 import cloudflare from "@astrojs/cloudflare";
 
-const env = loadEnv(process.env.NODE_ENV, process.cwd(), "");
+// const env = loadEnv(process.env.NODE_ENV, process.cwd(), "");
 
 // https://astro.build/config
 export default defineConfig({
   integrations: [tailwind(), react()],
-  output: "static",
-  adapter: cloudflare(),
+  output: "hybrid",
+  adapter: cloudflare({ imageService: "cloudflare" }),
 });
