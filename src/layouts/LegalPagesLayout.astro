@@ -13,15 +13,15 @@ const { title, description } = Astro.props;
     <meta charset="UTF-8" />
     <meta name="description" content={description ?? title} />
     <meta name="viewport" content="width=device-width" />
-    <link
-      rel="icon"
-      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍊</text></svg>"
-    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Ojuju:wght@200..800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&display=swap"
       rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍊</text></svg>"
     />
     <title>{title}</title>
   </head>
@@ -31,6 +31,30 @@ const { title, description } = Astro.props;
 </html>
 <style is:global>
   body {
-    @apply font-sans;
+    @apply font-serif;
+  }
+
+  h1 {
+    @apply text-4xl mt-8;
+  }
+
+  h2 {
+    @apply text-2xl mt-8;
+  }
+
+  h2 + p {
+    @apply mt-2;
+  }
+
+  h3 {
+    @apply text-2xl mt-8;
+  }
+
+  h3 + p {
+    @apply mt-2;
+  }
+
+  p + p {
+    @apply mt-4;
   }
 </style>

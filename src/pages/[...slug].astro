@@ -1,4 +1,5 @@
 ---
+import Layout from "../layouts/LegalPagesLayout.astro";
 import { getCollection } from "astro:content";
 
 export async function getStaticPaths() {
@@ -14,4 +15,10 @@ const { entry } = Astro.props;
 const { Content } = await entry.render();
 ---
 
-<Content />
+<Layout title={entry.data.title} description={entry.data.description}>
+  <div class="bg-orange-50 px-4 py-20 text-orange-950">
+    <div class="max-w-prose mx-auto flex flex-col">
+      <Content />
+    </div>
+  </div>
+</Layout>

@@ -1,52 +1,83 @@
 ---
+// import { Globe } from "../components/globe";
 import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Olópò Studio">
-  <main
-    class="border h-dvh bg-orange-500 px-2 text-white flex flex-col gap-4 p-4"
-  >
-    <div>
-      <h1 class="text-[15vw] text-white leading-none">
-        <span class="font-light">olópò</span>
-        <span class="uppercase text-[8vw] font-bold">Studio</span>
-      </h1>
-      <!-- <p class="text-xl">
-        A design studio A design studio A design studio A design studio
-      </p> -->
-    </div>
-
-    <section class="flex flex-col gap-4">
-      <!-- <h2 class="text-5xl lowercase">Appetizers</h2> -->
-      <div class="flex flex-col gap-8 max-w-prose">
-        <div class="flex flex-col gap-2">
-          <div class="flex gap-2 items-center">
-            <h3 class="text-2xl">💌 Innkeeper</h3>
-            <span class="border px-2 rounded-full text-xs uppercase opacity-80"
-              >beta</span
-            >
-          </div>
-          <p class="text-lg">
-            AI powered shadow work journaling app based on Carl Jung's work,
-            sends daily personalized prompts via email, and you can respond
-            directly by email or use the web app.
-          </p>
-        </div>
-
-        <div class="flex flex-col gap-2">
-          <div class="flex items-center gap-4">
-            <h3 class="text-2xl">💸 InvoiceDeck</h3>
-            <span class="border px-2 rounded-full text-xs uppercase opacity-80"
-              >coming soon</span
-            >
-          </div>
-          <p class="text-lg">The best invoicing app you've ever used.</p>
-        </div>
+  <div class="bg-orange-500 h-dvh px-2 text-orange-100 p-4 flex flex-col">
+    <main class="flex flex-col gap-20">
+      <div class="flex flex-col gap-2">
+        <h1 class="text-[14vw] text-white leading-none font-heading">
+          <span class="font-black uppercase">olópò studio</span>
+        </h1>
+        <p class="text-lg max-w-prose px-4">
+          Olópò Studio is my experimental one-person playground, where I turn
+          'what ifs' into 'what is'. Olópò is a Yoruba word that translates to
+          'catering company' in English.
+        </p>
       </div>
-    </section>
-    <footer class="mt-auto flex gap-4 text-sm">
-      <a href="/terms-of-service" class="underline">Terms of Service</a>
-      <a href="/privacy-policy" class="underline">Privacy Policy</a>
+
+      <div class="flex justify-between">
+        <section class="flex flex-col gap-4 px-4">
+          <h2 class="text-5xl uppercase font-bold font-heading">Menu</h2>
+          <div class="grid grid-cols-2 gap-10">
+            <div class="flex flex-col gap-2">
+              <div class="flex gap-2 items-center">
+                <h3 class="text-2xl">💌 Innkeeper</h3>
+                <span
+                  class="border border-orange-200 text-orange-100 px-2 rounded-full text-xs uppercase opacity-80"
+                  >beta</span
+                >
+              </div>
+              <p class="text-lg">
+                AI powered shadow work journaling app based on Carl Jung's work,
+                sends daily personalized prompts via email, and you can respond
+                directly by email or use the web app.
+              </p>
+            </div>
+
+            <div class="flex flex-col gap-2">
+              <div class="flex items-center gap-2">
+                <h3 class="text-2xl">🍪 InvoiceDeck</h3>
+                <span
+                  class="border border-orange-200 text-orange-100 px-2 rounded-full text-xs uppercase"
+                  >coming soon</span
+                >
+              </div>
+              <p class="text-lg">
+                The best invoicing app you've ever used. Smooth as butter, no
+                sign up required, and works offline.
+              </p>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+    <footer class="flex items-start justify-between mt-auto px-4">
+      <li class="flex flex-col gap-4 text-sm uppercase">
+        <a
+          href="mailto:contact@olopo.studio"
+          class="hover:text-yellow-300 duration-200">Contact</a
+        >
+        <a href="/privacy-policy" class="">Privacy Policy</a>
+        <a href="/terms-of-service" class="">Terms of Service</a>
+      </li>
+
+      <!-- <div
+        class="bg-white bg-opacity-10 backdrop-blur-sm border rounded-md border-orange-50 px-4 py-4 rounded-0 border-opacity-20 flex flex-col gap-2"
+      >
+        <p class="text-lg">Keep up with Olópò</p>
+        <form class="flex gap-0">
+          <input
+            type="email"
+            class="border px-2 py-2 rounded-l-md bg-orange-500"
+          />
+          <button
+            class="bg-white text-orange-500 px-4 py-1 uppercase rounded-r-md"
+            >Submit</button
+          >
+        </form>
+      </div> -->
     </footer>
-  </main>
+  </div>
 </Layout>
