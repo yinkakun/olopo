@@ -13,7 +13,3 @@ All commands are run from the root of the project, from a terminal:
 | yarn run astro ...`       | Run CLI commands like `astro add`, `astro check` |
 | yarn run astro -- --help` | Get help using the Astro CLI                     |
 
-## 👀 Todo
-
-- Add cobe on the homepage
-- Use white background for legal pages
