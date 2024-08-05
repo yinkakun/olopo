@@ -1,25 +1,33 @@
 ---
-// import { Globe } from "../components/globe";
+import { Globe } from "../components/globe";
 import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Olópò Studio">
-  <div class="bg-orange-500 h-dvh px-2 text-orange-100 p-4 flex flex-col">
-    <main class="flex flex-col gap-20">
-      <div class="flex flex-col gap-2">
-        <h1 class="text-[14vw] text-white leading-none font-heading">
-          <span class="font-black uppercase">olópò studio</span>
-        </h1>
-        <p class="text-lg max-w-prose px-4">
-          Olópò Studio is an experimental creative studio with aesthetic minimalism at it's core.
-        </p>
+  <div class="bg-orange-500 h-dvh text-orange-50 py-4 flex flex-col">
+    <div class="fixed inset-0 flex items-center justify-center pointer-events-none">
+      <div class="w-px h-full bg-black/50 -translate-x-1/2 fixed inset-y-0"></div>
+      <div class="h-px w-full bg-black/50 -translate-y-1/2 fixed inset-x-0"></div>
+      <div class="border rounded-full border-black/50">
+        <Globe client:load />
+      </div>
+    </div>
 
-        <!-- <span> Olópò is a Yoruba word that translates to 'catering company' in English. </span> -->
+    <main class="flex flex-col gap-20 grow items-start justify-center z-10 relative pt-10">
+      <div class="flex items-center gap-4 px-4 w-full">
+        <div class="flex flex-col gap-2">
+          <h1 class="text-2xl leading-none tracking-normal capitalize">
+            <span>🧑🏽‍🍳 olópò studio</span>
+          </h1>
+          <p class="text-lg">
+            An experimental creative studio with aesthetic minimalism at its core.
+          </p>
+          <!-- <p> Olópò is a Yoruba word that translates to 'catering company' in English. </p> -->
+        </div>
       </div>
 
       <div class="flex justify-between">
         <section class="flex flex-col gap-4 px-4">
-          <h2 class="text-5xl uppercase font-bold font-heading">Menu</h2>
           <div class="grid grid-cols-2 gap-10">
             <div class="flex flex-col gap-2">
               <div class="flex gap-2 items-center">
@@ -45,8 +53,8 @@ import Layout from "../layouts/Layout.astro";
                 >
               </div>
               <p class="text-lg">
-                The best invoicing app you've ever used. Smooth as butter, no sign up required, and
-                works offline.
+                The best invoice generator you've ever used. Smooth as butter, no sign up required,
+                and works offline.
               </p>
             </div>
           </div>
@@ -54,7 +62,7 @@ import Layout from "../layouts/Layout.astro";
       </div>
     </main>
     <footer class="flex items-start justify-between mt-auto px-4">
-      <li class="flex flex-col gap-4 text-sm uppercase">
+      <li class="flex flex-row gap-4 text-xs uppercase">
         <a href="mailto:contact@olopo.studio" class="hover:text-yellow-300 duration-200">Contact</a>
         <a href="/privacy-policy" class="">Privacy Policy</a>
         <a href="/terms-of-service" class="">Terms of Service</a>
